@@ -93,7 +93,7 @@ def main():
         with st.spinner('Loading model...'):
 
             model = models.__dict__[tv_model](pretrained=True)#.eval()
-            model.load_state_dict(torch.load('/content/drive/MyDrive/CT-Scans/model_backup/Dense169.pt',map_location=torch.device('cpu')))
+            model.load_state_dict(torch.load('Dense169.pt',map_location=torch.device('cpu')))
             # model.load_state_dict(torch.load('/content/drive/MyDrive/Buddi/CT CC/Dense169.pt',map_location=torch.device('cpu')))
             model.eval()
         default_layer = locate_candidate_layer(model, (3, 224, 224))
