@@ -2,3 +2,6 @@ altair
 pandas
 streamlit
 matplotlib
+torch
+torchvision
+torchcam
